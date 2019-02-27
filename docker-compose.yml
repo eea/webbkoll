@@ -1,0 +1,10 @@
+version: '3'
+services:
+    webbkoll:
+        build: .
+        environment:
+            - BACKEND_HOST=192.168.0.108
+            - BACKEND_PORT=8100
+        ports:
+            - 4000:4000
+        command: bash -c "tail -f /dev/null"
